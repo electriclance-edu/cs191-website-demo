@@ -3,7 +3,8 @@
         <link rel="stylesheet" href="style.css">
         <title>UP-AMBAG - Listings</title>
     </head>
-    <body>
+    <body onload="generate_listings()">
+        <script src="listings.js"></script>
         <div class="Navbar">
             <div class="navbar-logo">
                 <a class="logo-link" href="index.html">UP-AMBAG</a>
@@ -24,42 +25,68 @@
         </div>
         <div class="Content">
             <div class="Search">
-                <div class="SearchBar">
-                    <p>Search</p>
-                    <input type="text" class="SearchInput shadowed" placeholder="What are you looking for?" id="">
-                    <div class="FiltersButton">
-                        <p>Filters</p>
-                    </div>
+                <div class="SearchBar shadowed">
+                    <div class="searchbar-icon"></div>
+                    <input type="text" class="SearchInput" placeholder="What are you looking for?" id="">
+                </div>
+                <div class="FiltersButton button">
+                    <p>Filters</p>
                 </div>
             </div>
-            <div class="ListingGrid">
-                <div class="listing">
+            <div class="ListingGrid" id="ListingGrid">
+                <!-- Populated by generate_listings() -->
+                <!-- <div class="listing shadowed">
                     <div class="listing-img"></div>
-                    <p class="listing-name">Science calculator</p>
-                    <p class="listing-tags">
-                        <span class="listing-tag">FOR RENT</span>
-                        <span class="listing-tag">avemariyariya</span>
-                        <span class="listing-tag">CoE</span>
-                    </p>
-                </div>
+                    <div class="listing-info">
+                        <p class="listing-name">???</p>
+                        <p class="listing-price">???</p>
+                        <p class="listing-tags">
+                            <span class="listing-tag">???</span>
+                        </p>
+                    </div>
+                </div> -->
             </div>
-            <div class="Overlay">
-                <div class="ListingPopup">
+            <div class="Overlay" id="Overlay">
+                <div class="OverlayByebye"  onclick="closeListingPopup()"></div>
+                <div class="ListingPopup shadowed">
                     <div class="ListingPopup-image"></div>
-                    <p class="listing-name">Science calculator</p>
-                    <p class="listing-date">November 3, 2026</p>
-                    <p class="listing-status">AVAILABLE</p>
-                    <p class="listing-tags">
-                        <span class="listing-tag">FOR RENT</span>
-                        <span class="listing-tag">avemariyariya</span>
-                        <span class="listing-tag">CoE</span>
-                    </p>
-                    <p class="listing-cost">Rental, discuss with renter</p>
-                    <p class="listing-desc">A delicious science calculator, fit for a monarch. CASIO XcQ-1V.23.1</p>
-                    <p class="listing-features"></p>
-                    <div class="ButtonContainer">
-                        <div class="button">
-                            <p>Contact Seller</p>
+                    <div class="ListingPopup-info">
+                        <div class="ListingPopup-mainInfo">
+                            <p class="listing-title">Science calculator</p>
+                            <p class="listing-price">₱10/day</p>
+                        </div>
+                        <p class="listing-status">Status: Available</p>
+                        <p class="listing-desc">CASIO XcQ-1V.23.1 to. I shifted out of engineering and don't need a calculator anymore. Willing to rent to anyone near CFA!</p>
+                        <div class="listing-metadata">
+                            <p class="listing-metadatum">
+                                <span class="listing-metadatum-label">
+                                    Payment:
+                                </span>
+                                <span class="listing-metadatum-value">
+                                    Rental, to be discussed with renter
+                                </span>
+                            </p>
+                            <p class="listing-metadatum">
+                                <span class="listing-metadatum-label">
+                                    Posted:
+                                </span>
+                                <span class="listing-metadatum-value">
+                                    November 3, 2026
+                                </span>
+                            </p>
+                            <p class="listing-metadatum">
+                                <span class="listing-metadatum-label">
+                                    User:
+                                </span>
+                                <span class="listing-metadatum-value">
+                                    avemariyariya
+                                </span>
+                            </p>
+                        </div>
+                        <div class="ButtonContainer">
+                            <div class="button">
+                                <p>Contact Seller on Messenger</p>
+                            </div>
                         </div>
                     </div>
                 </div>

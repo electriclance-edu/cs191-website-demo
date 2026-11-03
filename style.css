@@ -7,6 +7,8 @@
     --c-shadow:rgba(0,0,0,0.1);
     --c-text:rgb(0,0,0);
     --c-text-special:#D91312;
+    --c-text-special2:#e7748b;
+    --c-text-lesser:grey;
 
 }
 * {
@@ -26,10 +28,10 @@ body {
 }
 .Content {
     width:100vw;
-    overflow-x:hidden;
     padding-top:150px;
+    padding-bottom:150px;
 }
-.logo-link, .title {
+.logo-link, .title, .listing-title, .listing-name {
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
     font-size:1.3em;
@@ -51,18 +53,9 @@ body {
 .navbar-spacer {
     flex-grow:2;
 }
-.SearchInput {
-    width:50%;
-    padding:10px 20px;
-    border-radius:2000px;
-    border:none;
-}
-.SearchInput:focus {
-    outline:1px solid var(--c-shadow);
-}
 .navbar-link {
     display:flex;
-    gap:5px;
+    gap:10px;
     align-items:center;
     margin:0 40px;
 }
@@ -70,8 +63,8 @@ body {
     border-bottom:2px solid var(--c-text-special);
 }
 .navbar-icon {
-    width:20px;
-    height:20px;
+    width:15px;
+    height:15px;
     background-size:contain;
 }
 .navbar-icon-home {
@@ -82,4 +75,136 @@ body {
 }
 .navbar-icon-user {
     background-image:url("res/icon/user.png");
+}
+.SearchBar {
+    display:flex;
+    width:fit-content;
+    background-color:var(--c-main);
+    gap:20px;
+    padding:10px 40px 10px 20px;
+    border-radius:20000px;
+    align-items:center;   
+}
+.SearchBar input {
+    border:none;
+}
+.SearchBar input:focus {
+    outline:none;
+}
+.searchbar-icon {
+    width:20px;
+    height:20px;
+    background-size:contain;
+    background-image:url("res/icon/search.png");
+}
+.Search {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    justify-content:center;
+}
+.button {
+    user-select:none;
+    background-color:var(--c-text-special);
+    color:white;
+    border-radius:10000px;
+    padding:5px 40px;
+    display:inline-block;
+}
+.listing {
+    background-color:white;
+    width:fit-content;
+    overflow:hidden;
+    border-radius:20px;
+    min-width:20vw;
+}
+.listing-info {
+    padding:20px;
+}
+.listing-maininfo {
+    width:100%;
+    display:flex;
+    gap:25px;
+    color:var(--c-text-special);
+}
+.listing-price, .listing-status, .listing-name {
+    font-size:1em;
+    font-family: "Libre Baskerville", serif;
+    color:var(--c-text-special);
+}
+.listing-tags {
+    color:var(--c-text-lesser);
+}
+.listing-img {
+    width:100%;
+    aspect-ratio: 1 / 0.75;
+    background-image:url("res/placeholder/scical.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.Overlay {
+    /* display:none; */
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.4);
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.OverlayByebye {
+    width:100%;
+    height:100%;
+    z-index:0;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.ListingPopup {
+    z-index:10;
+    background-color:var(--c-main);
+    border-radius:20px;
+    display:flex;
+    flex-direction:row;
+    overflow:hidden;
+    
+}
+.ListingPopup-image {
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    aspect-ratio: 1 / 1;
+    background-image:url("res/placeholder/scical.jpg");
+}
+.ListingPopup-mainInfo {
+    display:flex;
+    justify-content:space-between;
+}
+.listing-status {
+    margin-bottom:20px;
+}
+.ListingPopup-info {
+    padding:40px;
+}
+.ListingGrid {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:50px;
+}
+.listing-metadata {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.listing-metadatum {
+    display:flex;
+    justify-content:space-between;
+}
+.listing-metadatum-label {
+    font-family: "Libre Baskerville", serif;
+    color:var(--c-text-special);
+    font-weight:bold;
 }
