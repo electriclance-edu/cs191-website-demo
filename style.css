@@ -29,9 +29,8 @@ body {
 .Content {
     width:100vw;
     padding-top:150px;
-    padding-bottom:150px;
 }
-.logo-link, .title, .listing-title, .listing-name {
+.logo-link, .title, .listing-title, .listing-name, .signup-title {
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
     font-size:1.3em;
@@ -73,6 +72,11 @@ body {
 .navbar-icon-cart {
     background-image:url("res/icon/cart.png");
 }
+.navbar-icon-user-border {
+    padding:7px;
+    border:2px solid var(--c-text-special);
+    border-radius:20px;
+}
 .navbar-icon-user {
     background-image:url("res/icon/user.png");
 }
@@ -109,7 +113,7 @@ body {
     color:white;
     border-radius:10000px;
     padding:5px 40px;
-    display:inline-block;
+    width:fit-content;
 }
 .listing {
     background-color:white;
@@ -127,7 +131,7 @@ body {
     gap:25px;
     color:var(--c-text-special);
 }
-.listing-price, .listing-status, .listing-name {
+.listing-status, .listing-name {
     font-size:1em;
     font-family: "Libre Baskerville", serif;
     color:var(--c-text-special);
@@ -143,14 +147,13 @@ body {
     background-position:center;
 }
 .Overlay {
-    /* display:none; */
+    display:none;
     position:absolute;
     top:0;
     left:0;
     background-color:rgba(0,0,0,0.4);
     width:100vw;
     height:100vh;
-    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -207,4 +210,81 @@ body {
     font-family: "Libre Baskerville", serif;
     color:var(--c-text-special);
     font-weight:bold;
+}
+.Signup {
+    padding:40px;
+    background-color:white;
+    display:inline-block;
+    border-radius:20px;
+}
+.signup-label {
+    margin-top:15px;
+    font-weight:bold;
+    font-size:0.85em;
+}
+.signup-field {
+    padding:5px 20px;
+    border:1px solid rgb(150,150,150);
+    border-radius:20px;
+}
+.signup-field:focus {
+    outline:none;
+}
+.centerer-h {
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.signup-login {
+    text-decoration:underline;
+    text-align:center;
+}
+.Landing {
+    height:60vh;
+    display:flex;
+    align-items:center;
+    margin-left:15%;
+}
+.title {
+    font-size:3em;
+    margin-bottom:-10px;
+}
+.Landing-links {
+    margin-top:100px;
+    display:flex;
+    gap:5px;
+    flex-direction:column;
+}
+.landing-right {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.landing-firstlisting {
+    position:absolute;
+    left:50%;
+    transform:translatex(-50%) rotate(-5deg) scale(1.1);
+}
+.landing-secondlisting {
+    position:absolute;
+    left:30%;
+    top:25%;
+    transform:translatex(-50%) rotate(-10deg) scale(0.9);
+}
+.landing-thirdlisting {
+    position:absolute;
+    left:65%;
+    top:35%;
+    transform:translatex(-50%) rotate(10deg) scale(0.8);
+}
+.About {
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding:50px 10vw;
+    background-color:var(--c-text-special);
+    margin-top:100px;
+}
+.About p, .About a {
+    color:white;
 }
