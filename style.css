@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+    --c-main:rgb(255,255,255);
+    --c-main2:#FBF1E6;
+    --c-shadow:rgba(0,0,0,0.1);
+    --c-text:rgb(0,0,0);
+    --c-text-special:#D91312;
+
+}
+* {
+    margin:0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing:border-box;
+}
+a {
+    color:var(--c-text);
+    text-decoration:none;
+}
+body {
+    background-color:var(--c-main2);
+}
+.Content {
+    width:100vw;
+    overflow-x:hidden;
+    padding-top:150px;
+}
+.logo-link, .title {
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size:1.3em;
+    text-decoration:none;
+    color:var(--c-text-special);
+}
+.Navbar {
+    display:flex;
+    padding:20px 40px;
+    top:20px;
+    left:50px;
+    right:50px;
+    position:absolute;
+    border-radius:20px;
+}
+.shadowed {
+    box-shadow:2px 2px 10px var(--c-shadow);
+}
+.navbar-spacer {
+    flex-grow:2;
+}
+.SearchInput {
+    width:50%;
+    padding:10px 20px;
+    border-radius:2000px;
+    border:none;
+}
+.SearchInput:focus {
+    outline:1px solid var(--c-shadow);
+}
+.navbar-link {
+    display:flex;
+    gap:5px;
+    align-items:center;
+    margin:0 40px;
+}
+.navbar-link.current a {
+    border-bottom:2px solid var(--c-text-special);
+}
+.navbar-icon {
+    width:20px;
+    height:20px;
+    background-size:contain;
+}
+.navbar-icon-home {
+    background-image:url("res/icon/home.png");
+}
+.navbar-icon-cart {
+    background-image:url("res/icon/cart.png");
+}
+.navbar-icon-user {
+    background-image:url("res/icon/user.png");
+}
