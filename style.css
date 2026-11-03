@@ -30,7 +30,7 @@ body {
     width:100vw;
     padding-top:150px;
 }
-.logo-link, .title, .listing-title, .listing-name, .signup-title {
+.logo-link, .title, .listing-title, .UserListings-title, .listing-name, .signup-title {
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
     font-size:1.3em;
@@ -287,4 +287,33 @@ body {
 }
 .About p, .About a {
     color:white;
+}
+.new-listing {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.UserListings > p {
+    margin-left:20vw;
+}
+.UserListings-title {
+    font-size:2em;
+}
+.UserListings .ListingGrid {
+    margin-top:10px;
+}
+.addListing {
+    padding:6px 27px;
+    background-color:var(--c-text-special);
+    border-radius:10000px;
+    font-size:3em;
+    font-weight:bolder;
+    color:white;
+    user-select:none;
+}
+.bleh {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
 }
