@@ -43,6 +43,23 @@
                         </div>
                     </div>
                 </div>
+                <p class="UserListings-title">Your borrowings</p>
+                <div class="ListingGrid" id="ListingGrid2">
+                    <!-- Populated by generate_listings() -->
+                </div>
+            </div>
+            <div class="Overlay" id="Overlay3">
+                <div class="OverlayByebye"  onclick="closeBorrowingPopup()"></div>
+                <div class="ListingPopup shadowed">
+                    <div class="ListingPopup-image"></div>
+                    <div class="ListingPopup-info">
+                        <p class="listing-name">Return item</p>
+                        <p class="signup-label">Feedback (how was borrowing the item?</p>
+                        <input type="text" placeholder="Feedback..." class="signup-field">
+                        <br><br>
+                        <p class="button">Submit feedback</p>
+                    </div>
+                </div>
             </div>
             <div class="Overlay" id="Overlay2">
                 <div class="OverlayByebye"  onclick="closeNewListing()"></div>
@@ -52,6 +69,7 @@
                         <p class="addListing shadowed">+</p>
                     </div>
                     <div class="ListingPopup-info">
+                        <p class="listing-name">Create a new listing</p>
                         <p class="signup-label">Name of Item</p>
                         <input type="text" placeholder="Name of item" class="signup-field">
                         <p class="signup-label">Pricing</p>
@@ -70,6 +88,8 @@
                             <option value="saab">Email</option>
                             <option value="fiat">Mobile number</option>
                         </select>
+                        <br><br>
+                        <p class="button">Create listing</p>
                     </div>
                 </div>
             </div>

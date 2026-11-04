@@ -1,11 +1,27 @@
 // These functions are very stupid and should be redone
 function generate_listings() {
-    generate_listing(
+    var a = generate_listing(
         "res/placeholder/electronics.JPG",
         "Assorted components",
         "For lending",
         "robotika"
     );
+    document.getElementById("ListingGrid").appendChild(a);
+
+    var b = generate_listing(
+        "res/placeholder/scical.jpg",
+        "Science calculator",
+        "₱10/day",
+        "avemariyariya"
+    );
+    b.onclick = openBorrowingPopup;
+    document.getElementById("ListingGrid2").appendChild(b);
+}
+function openBorrowingPopup() {
+    document.getElementById("Overlay3").style.display = "flex";
+}
+function closeBorrowingPopup() {
+    document.getElementById("Overlay3").style.display = "none";
 }
 function createNewListing() {
     document.getElementById("Overlay2").style.display = "flex";
@@ -48,7 +64,7 @@ function generate_listing(img_url, title_data, price_data, user_data) {
     tags.appendChild(user);
     listing.appendChild(info);
 
-    document.getElementById("ListingGrid").appendChild(listing);
+    return listing;
 }
 function elem(tag, initialClass) {
     var e = document.createElement(tag);
